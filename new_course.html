@@ -86,23 +86,17 @@
     </div>
 
     <div class="form-label-group">
+      <label>Course ID: </label><br>
+      <input id="ID" type="text" class="form-control" placeholder="Enter author name" required autofocus>
+    </div>
+
+    <div class="form-label-group">
       <label>Description:</label><br>
       <textarea id="description" name="name" rows="8" cols="80" placeholder="Description"></textarea>
     </div>
 
-    <button onclick="randstr()" class="form-label-group btn btn-lg btn-primary btn-block" type="submit">Add Course</button>
+    <button class="form-label-group btn btn-lg btn-primary btn-block" type="su" name="button">Add Course</button>
   </form>
-
-  <script>
-    function randstr() {
-      var x = $("course_name").value;
-      var y = "TISS" + x.substring(0,3);
-      var course_id =  Math.random().toString(10).replace('0.', y || '');
-      document.getElementByID("course_name").value = y;
-    }
-
-    document.getElementByID("course_name").value = course_id;
-  </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="game.js" charset="utf-8"></script>
