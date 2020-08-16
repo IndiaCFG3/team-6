@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Slabo+27px&display=swap");
+@font-face {
+  font-family: valorant;
+  src: url("./fonts/Valorant\ Font.ttf");
+}
+@font-face {
+  font-family: red-dead;
+  src: url("./fonts/CHINESER.TTF");
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: calc(100 * var(--vh));
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+}
+.caption {
+  font-family: valorant;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+h1 {
+  margin: 5px;
+  color: white;
+  font-weight: 1;
+  font-size: 60px;
+  overflow: hidden;
+}
+p {
+  color: white;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  width: 50%;
+  padding: 20px;
+  opacity: 0.4;
+}
+.dynamic {
+  font-family: red-dead;
+  letter-spacing: 10px;
+  color: rgb(183, 194, 218);
+  opacity: 0;
+  animation-name: example;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+}
+
+.line {
+  border: 1px solid;
+  height: 30px;
+  background-color: whitesmoke;
+  opacity: 0.7;
+  align-items: center;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: whitesmoke;
+  opacity: 0.4;
+  z-index: 0;
+}
+.welcome h3 {
+  overflow: hidden;
+}
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 769px) {
+  h1 {
+    font-size: 30px;
+  }
+  .line {
+    max-height: 20px;
+  }
+  .welcome h3 {
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 15px;
+  }
+  .dynamic {
+    letter-spacing: 10px;
+  }
+}

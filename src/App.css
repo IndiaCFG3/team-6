@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+/*Overlay*/
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+body * {
+  z-index: 1;
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+  background: #464747;
+}
+.sect {
+  display: block;
+  top: 100vh;
+  background-color: burlywood;
+  min-height: 100vh;
+  text-align: center;
+}
+.text {
+  text-align: center;
+  padding: 50px;
+}
+.App {
+  width: 100%;
+  height: 100%;
+}
+/* .AppContainer {
+  scroll-snap-type: y mandatory;
+}*/
+section {
+  scroll-snap-align: start;
+}
+.AppContainer {
+  height: 100%;
+}
+input {
+  margin: 1.2rem 0;
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+input[type='submit'],
+button {
+  font: inherit;
+}
+
+table th,
+table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+table th {
+  background: var(--light-color);
+}
+.form-container {
+  opacity: 1;
+  position: relative;
+
+  min-height: 100vh;
+  padding: 20%;
+  padding-top: 50px;
+  background-color: gray;
+}

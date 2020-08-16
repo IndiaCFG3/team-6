@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap");
+#projects {
+  position: relative;
+  background-color: rgb(180, 168, 168);
+  height: 100vh;
+  height: calc(100 * var(--vh));
+  overflow-y: scroll;
+  margin: 0;
+  margin-top: 1px;
+  padding: 0;
+  z-index: 0;
+}
+
+#projects::-webkit-scrollbar {
+  width: 2px;
+}
+#projects::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+#projects::-webkit-scrollbar-thumb {
+  background: #464747;
+}
+#projects h1 {
+  font-family: valorant;
+  margin-top: 7vh;
+  margin-top: calc(7 * var(--vh));
+}
+.projectContainer {
+  padding: 50px;
+}
+.projectContainer p {
+  font-family: "Raleway", sans-serif;
+}
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    rgb(44, 47, 48) 0%,
+    rgb(68, 45, 68) 35%,
+    rgb(4, 22, 34) 100%
+  );
+  z-index: -1;
+  transition: background ease 3000ms;
+}
+
+.blur {
+  background: rgb(0, 0, 0);
+  opacity: 0.8;
+
+  z-index: 1;
+}
+.box div {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-color: transparent;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+}
+.box div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
+.box div:nth-child(2) {
+  top: 70%;
+  left: 50%;
+  animation: animate 7s linear infinite;
+}
+.box div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: animate 9s linear infinite;
+}
+.box div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+.box div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+.box div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+.box div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: animate 15s linear infinite;
+}
+.box div:nth-child(8) {
+  top: 32%;
+  left: 25%;
+  animation: animate 16s linear infinite;
+}
+.box div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: animate 9s linear infinite;
+}
+.box div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3) translateY(-90px) rotate(360deg);
+    opacity: 0;
+  }
+}
+.projectitem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  height: 90vh;
+  background-color: black;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  border-radius: 10px 10px 0px 0px;
+  animation-name: evolve;
+  animation-iteration-count: 1;
+  animation-duration: 600ms;
+}
+.projectitem h3 {
+  margin-bottom: auto;
+}
+.projectitem img {
+  min-width: 100%;
+  max-height: 40%;
+
+  border-radius: 10px 10px 0px 0px;
+  margin-bottom: auto;
+}
+@keyframes evolve {
+  from {
+    opacity: 0;
+    height: 0px;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.hide {
+  display: none;
+}
+#projects h3 {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+.projectContainer p {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: #c4c4c46b;
+}
+
+.projectsListItem {
+  position: relative;
+  min-height: 100px;
+  min-width: 50%;
+  max-width: 80%;
+  margin: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  /* background: linear-gradient(
+    90deg,
+    rgb(63, 51, 60) 0%,
+    rgb(58, 123, 143) 35%,
+    rgb(211, 218, 218) 100%
+  ); */
+  background-color: rgba(0, 0, 0, 0.116);
+
+  border-radius: 10px;
+  box-shadow: 5px 5px 6px 5px #000000ab;
+  transition: scale ease 500ms, opacity ease 1000ms;
+}
+
+.open {
+  opacity: 0;
+}
+.linktoproject {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform ease 300ms;
+}
+.linktoproject:hover {
+  transform: scale(1.3);
+}
+.linktoproject h4 {
+  color: rgb(13, 12, 58);
+  /* font-family: 'Lemonada', cursive; */
+
+  font-size: 1.2rem;
+}
+.technologies {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.technologyitem {
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+.devicon-github-plain,
+.fa-link {
+  font-size: 2rem;
+}
+.devicon-nodejs-plain-wordmark,
+.devicon-express-original-wordmark {
+  font-size: 4rem;
+}
+.devicon-react-original,
+.devicon-react-original-wordmark,
+.devicon-mongodb-plain-wordmark {
+  font-size: 2rem;
+  padding: 20px;
+}
+.devicon-vuejs-plain-wordmark {
+  font-size: 3rem;
+}
+.devicon-angularjs-plain-wordmark {
+  font-size: 4rem;
+}
+.hosting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hosting a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+.projectbox {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.projectbox img {
+  height: 20vh;
+  width: 100%;
+  border: 3px #fff solid;
+}
+.projectbox img:hover {
+  opacity: 0.5;
+  border-color: #eece1a;
+  transition: all 0.5s ease-out;
+}
+.btn,
+.btn-dark,
+.btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+.btn:hover,
+.btn-dark:hover,
+.btn-light:hover {
+  background: #eece1a;
+  color: #000;
+}
+
+.btn-dark {
+  background: black;
+  color: #fff;
+}
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333;
+}
+
+.item a {
+  margin-top: 5px;
+  text-decoration: none;
+  padding: 10px;
+}
+.item {
+  text-transform: capitalize;
+}
+
+.item .pimage {
+  padding: 0;
+}
+.color-secondary {
+  color: #eece1a;
+}
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projectsList {
+    grid-template-columns: auto;
+  }
+  .devicon-nodejs-plain-wordmark,
+  .devicon-express-original-wordmark {
+    font-size: 4rem;
+  }
+  .devicon-react-original,
+  .devicon-react-original-wordmark,
+  .devicon-mongodb-plain-wordmark {
+    font-size: 2rem;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .projectsList {
+    grid-template-columns: auto;
+  }
+  .projectitem {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .projectsListItem {
+    min-width: 80%;
+  }
+  .devicon-nodejs-plain-wordmark,
+  .devicon-express-original-wordmark {
+    font-size: 3rem;
+  }
+  .devicon-react-original,
+  .devicon-react-original-wordmark,
+  .devicon-mongodb-plain-wordmark {
+    font-size: 1.5rem;
+    padding: 4px;
+  }
+}
+@media screen and (min-width: 1171px) {
+  .projectbox {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projectbox {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projectbox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .devicon-vuejs-plain-wordmark {
+    font-size: 2rem;
+  }
+  .devicon-angularjs-plain-wordmark {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .projectbox {
+    grid-template-columns: 1fr;
+  }
+  .projectContainer p {
+    font-size: 12px;
+  }
+  .wrapper {
+    height: 500%;
+  }
+}
