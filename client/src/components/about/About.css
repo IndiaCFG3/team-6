@@ -1,0 +1,166 @@
+#about {
+  position: relative;
+  background-color: rgb(180, 168, 168);
+  height: 100vh;
+  height: calc(100 * var(--vh));
+  overflow-y: scroll;
+  margin: 0;
+  margin-top: 1px;
+  padding: 0;
+  z-index: 0;
+}
+
+#about::-webkit-scrollbar {
+  width: 2px;
+}
+#about::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+#about::-webkit-scrollbar-thumb {
+  background: #464747;
+}
+#about h1 {
+  font-family: valorant;
+  margin-top: 7vh;
+  margin-top: calc(7 * var(--vh));
+}
+#about p {
+  font-family: 'Roboto', sans-serif;
+}
+.aboutcontainer {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+.greeting {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-size: 1.2rem;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: #c4c4c46b;
+}
+.wrapper2 {
+  position: absolute;
+  width: 100%;
+  height: 500%;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgb(123, 121, 124) 0%,
+    rgb(46, 134, 68) 35%,
+    rgb(38, 3, 78) 100%
+  );
+  z-index: -1;
+}
+/* .first-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first-part img {
+  margin-left: 50px;
+  border-radius: 50%;
+}
+.bio {
+  padding-left: 10%;
+}*/
+.bio p {
+  text-align: left;
+  margin-left: 0;
+  /* margin-top: 20px; */
+  padding-left: 0;
+  font-size: 20px;
+  width: 100%;
+}
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr);
+}
+.about-info .bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  max-height: 300px;
+  border: #eece1a 3px solid;
+}
+.about-info .bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+.about-info .job-1 {
+  grid-area: job1;
+  background: #515151 url('./images/project2.jpg') no-repeat;
+}
+.about-info .job-2 {
+  grid-area: job2;
+  background: #515151 url('./images/violin.jpg') no-repeat center center / cover;
+}
+.about-info .job-3 {
+  grid-area: job3;
+  background: #515151 url('./images/project5.jpg') no-repeat;
+}
+.about-info .job {
+  padding: 0.5rem;
+  color: #fff;
+  border-bottom: #eece1a 5px solid;
+  margin: 10px;
+  min-height: 200px;
+}
+
+.job p {
+  text-align: left;
+  padding: 20px;
+  padding-left: 10px;
+  width: 100%;
+}
+.job h3,
+h6 {
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .bio h3 {
+    text-align: center;
+  }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr;
+  }
+  .greeting {
+    font-size: 18px;
+  }
+  .about-info img {
+    max-width: 200px;
+  }
+  .bio h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .bio p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .greeting {
+    font-size: 12px;
+  }
+  .bio h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .bio p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .about-info img {
+    max-width: 200px;
+  }
+}

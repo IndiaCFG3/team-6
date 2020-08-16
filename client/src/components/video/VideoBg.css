@@ -1,0 +1,10 @@
+.fullscreen-video-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  min-height: calc(100 * var(--vh));
+  overflow: hidden;
+  z-index: -10;
+}
