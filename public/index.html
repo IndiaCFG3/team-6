@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" style="--vh: 1px;">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon1.ico" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Portfolio website J Ananthakrishnan Codewithak"
+    />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div class="overlay" id="overlay">
+      <div class="preloader" id="preloader">
+        <div class="diamond" id="diamond">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="movement" id="movement">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="root"></div>
+  </body>
+  <script src="preloader.js"></script>
+</html>

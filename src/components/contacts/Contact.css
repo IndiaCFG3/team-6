@@ -1,0 +1,75 @@
+#contact {
+  position: relative;
+  background-color: rgb(180, 168, 168);
+  min-height: 100vh;
+  min-height: calc(100 * var(--vh));
+  overflow-y: scroll;
+  margin: 0;
+  margin-top: 1px;
+  padding: 0;
+  z-index: 0;
+}
+
+#contact::-webkit-scrollbar {
+  width: 2px;
+}
+#contact::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+#contact::-webkit-scrollbar-thumb {
+  background: #464747;
+}
+#contact h1 {
+  font-family: valorant;
+  margin-top: 7vh;
+  margin-top: calc(7 * var(--vh));
+}
+#contact p {
+  font-family: "Roboto", sans-serif;
+}
+.wrapper3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgb(2, 2, 43) 0%,
+    rgb(41, 48, 44) 35%,
+    rgb(0, 48, 77) 100%
+  );
+  z-index: -1;
+}
+.contactcontainer {
+  padding: 50px;
+  height: 100%;
+  width: 100%;
+}
+.boxes {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+.boxes div {
+  font-size: 2rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease-out;
+}
+.boxes div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #eece1a;
+  color: #000;
+}
+.boxes div:hover span {
+  color: #000;
+}
+@media screen and (max-width: 500px) {
+  .boxes div {
+    font-size: 1rem;
+  }
+}
